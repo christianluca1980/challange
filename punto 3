@@ -1,0 +1,30 @@
+<html>
+
+
+
+<label>valor hora:</label>
+<input type="text" name="hora" id="hora" planceholder="valor hora">
+<label>nombre:</label>
+<input type="text" name="name" id="name" planceholder="nombre empleado">
+<label>antiguedad:</label>
+<input type="text" name="antiguedad" id="antiguedad" planceholder="antiguedad del empleado">
+<label>cantidad de horas:</label>
+<input type="text" name="horastrab" id="horastrab" planceholder="horas trabajadas">
+
+<input type="button" value="enviar" onclick="calcular()">
+<span id="resultado"></span>
+
+<script>
+    function calcular(){
+        let hora = document.getElementById("hora").value;
+        let name = document.getElementById("name").value;
+        let ant = document.getElementById("antiguedad").value;
+        let horast = document.getElementById("horastrab").value;
+
+        let res = hora * horast;
+        if (ant >= 10) res += ant * 30;
+        document.getElementById("resultado").innerHTML = name + " cobrara:" + res;
+    }
+</script>
+
+</html>

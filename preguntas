@@ -1,0 +1,4 @@
+1. ¿Qué nodo es la raíz?
+         El nodo A.
+2. ¿Cuántos caminos diferentes de longitud tres hay
+         Hay 7:ABFG , BFGH ,ACJK,CJKL,CJKM,AENP,AENQ.           

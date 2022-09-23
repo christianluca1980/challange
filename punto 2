@@ -1,0 +1,49 @@
+<html>
+<script>
+
+  let attempt = 3;
+
+  function validate() {
+    var usuar = document.getElementById("usuar").value;
+    var password = document.getElementById("password").value;
+    if (usuar == "admin" && password == "12345") {
+      alert("felictaciones recordas tu contraseña");
+      return false;
+    }
+    else if (usuar != "admin" && password != "12345") {
+      alert("tienes que refrescar tu memoria ");
+      return true;
+    } else {
+    attempt--;
+  }
+
+  alert(" Te queda " + attempt + " intentos mas ")
+  if (attempt <= 0) {
+    alert('Espera 5 segundos para seguir intentando');
+    document.getElementById("usuar")
+    document.getElementById("password")
+    document.getElementById("sumbit")
+    setTimeout(function () {
+
+      document.getElementById("usuar")
+      document.getElementById("password")
+      document.getElementById("sumbit")
+
+    }, 5000);
+
+    attempt = 3;
+  }
+  }
+</script>
+
+<form id="form" method="POST" name="form" onsubmit="validate()" >
+  <label>usuario:</label>
+  <input type="text" name="usuar" id="usuar" planceholder="ingrese usuario">
+  <label>password:</label>
+  <input type="password" name="password" id="password" planceholder="ingrese password">
+  <input type="submit" value="login" id="submit" >
+</form>
+<span><b class="note">¿Olvidastes tu contaseña?</b>
+</span>
+
+</html>

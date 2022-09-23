@@ -1,0 +1,18 @@
+const elementos = 100;
+const primos = [];
+
+
+for(let candidato = 1; candidato <= elementos; candidato++) {
+    let primo = true;
+    for(let divisor=2; divisor < candidato; divisor++) {
+
+        if(candidato%divisor === 0) {
+            primo = !primo;
+            break;
+        }
+    }
+    if(primo) primos.push(candidato);
+}
+
+
+console.log("los numeros primos son: ",primos);
